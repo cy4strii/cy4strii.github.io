@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Контейнеры под ваши задачи</title><link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet"><style>
+:root{--bg:#0d0e10;--s1:#141619;--s2:#1b1e22;--ln:rgba(255,255,255,.09);--tx:#ecebe8;--mut:#8d9298;--acc:#d9622b;--paper:#eeece8;--ink:#111214;--pm:#6d7176;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*:before,*:after{box-sizing:inherit}html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.65 "Inter Tight","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}.w{max-width:1280px;margin:0 auto}
+.light{background:var(--paper);color:var(--ink)}.light .lead,.light p{color:var(--pm)}.light h2 em{color:#9a9da1}
+h1,h2,h3{margin:0;font-weight:300;letter-spacing:-.03em;line-height:1.06}h1 em,h2 em{font-style:normal;color:var(--mut)}
+.tag{display:flex;align-items:center;gap:14px;font-size:12px;font-weight:500;line-height:1;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin-bottom:28px}.tag:before{content:"";width:28px;height:1px;background:var(--acc)}
+.lead{color:var(--mut);font-size:18px;max-width:640px;margin:28px 0 0;font-weight:300}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 30px;border:1px solid var(--acc);background:var(--acc);color:#fff;font:500 14px/1 inherit;letter-spacing:.04em;cursor:pointer;transition:.35s;font-family:inherit}
+.btn i{font-style:normal;transition:transform .35s}.btn:hover i{transform:translateX(6px)}.btn:hover{background:#bd5321;border-color:#bd5321}
+.btn.o{background:transparent;border-color:rgba(255,255,255,.28);color:var(--tx)}.btn.o:hover{border-color:var(--tx)}
+.light .btn.o{color:var(--ink);border-color:rgba(0,0,0,.25)}.light .btn.o:hover{border-color:var(--ink)}
+header{position:sticky;top:0;z-index:20;background:rgba(13,14,16,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--ln);padding-top:env(safe-area-inset-top,0px)}
+header .w{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:600;letter-spacing:.22em;font-size:13px}.logo b{color:var(--acc)}
+nav{display:flex;gap:34px;font-size:13px;color:var(--mut);letter-spacing:.04em}nav a{transition:.3s}nav a:hover{color:var(--tx)}
+.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse 60% 50% at 50% 78%,rgba(217,98,43,.13),transparent 70%),var(--bg)}
+.hero p.sub{color:var(--mut);font-weight:300;font-size:19px;max-width:620px}.btns{display:flex;gap:14px;flex-wrap:wrap}
+.hv svg{width:100%;height:auto;display:block}.cap{color:var(--mut);font-size:13px;letter-spacing:.06em;margin:0}
+.adv{display:grid;border-top:1px solid var(--ln)}.adv div{padding:24px 20px 0 0;font-size:15px}.adv span{display:block;color:var(--acc);font-size:12px;letter-spacing:.14em;margin-bottom:8px}
+.cats{display:grid}.cat{border-top:1px solid rgba(128,128,128,.35);padding-top:18px}.cat .im{background:var(--s1);overflow:hidden}.cat svg{display:block;width:100%;transition:transform .7s}.cat:hover svg{transform:scale(1.06)}.cat h3{font-size:20px;font-weight:400;margin-top:18px;letter-spacing:-.01em}
+.card{background:var(--s1);border:1px solid var(--ln);display:flex;flex-direction:column;transition:border-color .4s}.card:hover{border-color:rgba(217,98,43,.55)}
+.ph{overflow:hidden;background:radial-gradient(circle at 50% 70%,#2a2e33,#141619)}.ph svg{display:block;width:100%;transition:transform .8s}.card:hover .ph svg{transform:scale(1.08)}
+.cb{padding:28px;display:flex;flex-direction:column;flex:1}.card h3{font-size:21px;font-weight:400;letter-spacing:-.01em;line-height:1.25}.card p{color:var(--mut);font-size:14.5px;margin:14px 0 0;font-weight:300}
+.ref{font-size:12px;letter-spacing:.06em;color:var(--acc);margin-top:14px}.sp{list-style:none;padding:0;margin:0;font-size:13px;color:#c3c5c7}.sp li{border-top:1px solid var(--ln);padding:7px 0}.spw{margin-top:16px}
+.cbt{margin-top:auto;padding-top:24px;display:flex;gap:10px;flex-wrap:wrap}.cbt .btn{padding:13px 18px;font-size:13px;flex:1;justify-content:center;white-space:nowrap}
+.steps{display:grid}.step{border-top:1px solid rgba(128,128,128,.35);padding-top:20px}.step b{font-weight:300;font-size:13px;letter-spacing:.14em;color:var(--acc);display:block;margin-bottom:12px}.step h3{font-size:19px;font-weight:400;letter-spacing:-.01em}.step p{font-size:14px;margin:10px 0 0;color:var(--mut);font-weight:300}
+.chips{display:flex;flex-wrap:wrap;gap:10px}.chips span{border:1px solid rgba(0,0,0,.18);padding:11px 18px;font-size:14px;transition:.3s;color:var(--ink)}.chips span:hover{border-color:var(--acc);color:var(--acc)}
+.note{border-left:1px solid var(--acc);padding-left:16px;font-size:14px;margin-top:36px}
+.why{display:grid}.why>div{border-top:1px solid var(--ln);padding-top:24px}.why b{font-size:13px;letter-spacing:.14em;color:var(--acc);font-weight:400}.why h3{font-size:24px;font-weight:300;margin:16px 0 12px}.why p{color:var(--mut);margin:0;font-size:15px;font-weight:300}
+form{display:grid;gap:26px}label{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:6px}
+input,textarea{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.22);color:var(--tx);padding:10px 0;font:inherit;font-size:17px;border-radius:0}input:focus,textarea:focus{outline:0;border-color:var(--acc)}input[type=file]{font-size:14px;color:var(--mut)}
+.fn{font-size:13px;color:var(--mut);margin:0}.ok{display:none;color:var(--acc)}
+details{border-top:1px solid var(--ln);padding:24px 0}details:last-child{border-bottom:1px solid var(--ln)}summary{cursor:pointer;font-size:20px;font-weight:300;list-style:none;display:flex;justify-content:space-between;gap:24px;letter-spacing:-.01em}summary::-webkit-details-marker{display:none}summary:after{content:"+";color:var(--acc);font-weight:300;font-size:26px;line-height:1;transition:transform .3s}details[open] summary:after{transform:rotate(45deg)}details p{color:var(--mut);margin:14px 0 0;max-width:720px;font-weight:300}
+.cta{text-align:center;background:radial-gradient(ellipse 50% 70% at 50% 100%,rgba(217,98,43,.2),transparent 70%),var(--s1);border-top:1px solid var(--ln)}.cta h2{margin:0 auto}.cta p{max-width:600px;margin:26px auto 40px;color:var(--mut);font-size:18px;font-weight:300}
+footer{background:#08090a;color:var(--mut);font-size:14px;border-top:1px solid var(--ln)}footer h4{color:var(--tx);font-weight:500;margin:0 0 14px;font-size:12px;letter-spacing:.2em;text-transform:uppercase}footer a{display:block;padding:4px 0;transition:.3s}footer a:hover{color:var(--tx)}
+.dr{width:100%;color:var(--tx)}
+<style>.w{padding:0 48px}section{padding:160px 0}.hp{padding-top:110px;padding-bottom:0}
+.hero p.sub{margin:36px 0 44px}.hv{margin:40px 0 12px}.adv{grid-template-columns:repeat(4,1fr);margin-top:36px;padding-bottom:56px}
+.cats{grid-template-columns:repeat(4,1fr);gap:28px;margin-top:80px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:80px}
+.card .spw{max-height:0;opacity:0;overflow:hidden;transition:max-height .6s ease,opacity .5s}.card:hover .spw,.card:focus-within .spw,.card:focus .spw{max-height:340px;opacity:1}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center}#tech .two,#form .two{align-items:start}.dr{max-width:520px;justify-self:end}
+.s5{grid-template-columns:repeat(5,1fr);gap:28px;margin-top:100px}.why{grid-template-columns:repeat(4,1fr);gap:36px;margin-top:80px}
+.cta{padding:180px 0}.fg{display:grid;grid-template-columns:2fr 1fr;gap:60px;padding-top:80px;padding-bottom:80px}.chips{margin-top:40px}.stk{display:none}@media(max-width:900px){.w{padding:0 22px}section{padding:84px 0}.hp{padding-top:56px}h1{font-size:46px}h2{font-size:31px}.lead,.hero p.sub{font-size:16px}
+.hero p.sub{margin:24px 0 32px}.btns .btn{width:100%;justify-content:center}.hv{margin:36px -22px 8px}.adv{grid-template-columns:1fr 1fr;margin-top:28px;padding-bottom:36px;row-gap:8px}.adv div{font-size:14px;padding-bottom:14px}
+.cats{grid-template-columns:1fr 1fr;gap:20px 14px;margin-top:48px}.cat h3{font-size:15px}
+.grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:48px -22px 0;padding:0 22px 8px;-webkit-overflow-scrolling:touch}.grid::-webkit-scrollbar{display:none}.card{flex:0 0 86%;scroll-snap-align:center}.cb{padding:22px}
+.cbt .btn{flex:1 1 100%}.two{display:grid;gap:48px}.dr{max-width:420px}.s5{gap:0;margin-top:56px;border-left:1px solid rgba(128,128,128,.35);margin-left:4px}.step{border-top:0;padding:0 0 30px 24px;position:relative}.step:before{content:"";position:absolute;left:-4px;top:5px;width:7px;height:7px;background:var(--acc);border-radius:50%}
+.why{gap:30px;margin-top:48px}form{margin-top:8px}.cta{padding:96px 0 120px}summary{font-size:17px}.fg{display:grid;gap:36px;padding-top:56px;padding-bottom:110px}
+.stk{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:rgba(13,14,16,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--ln)}.stk .btn{width:100%;justify-content:center}header .btn{display:none}header .w{height:60px}.card .spw{max-height:none;opacity:1}.s5,.why,.two,.fg{grid-template-columns:1fr}.dr{justify-self:start}nav{display:none}.cta h2{font-size:31px}}</style></head><body><svg width="0" height="0" style="position:absolute"><defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a4f56"/><stop offset=".5" stop-color="#33373c"/><stop offset="1" stop-color="#202327"/></linearGradient><linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#2a2d32"/><stop offset="1" stop-color="#17191c"/></linearGradient></defs><symbol id="c300" viewBox="0 0 340 150"><ellipse cx="170.0" cy="128" rx="150.0" ry="7" fill="#000" opacity=".5"/><rect x="20" y="30" width="250" height="86" fill="url(#g1)"/><path d="M270 30l50 16v70l-50 0z" fill="url(#g2)"/><g stroke="#000" stroke-opacity=".28" stroke-width="2"><path d="M36 34v78"/><path d="M53 34v78"/><path d="M69 34v78"/><path d="M86 34v78"/><path d="M102 34v78"/><path d="M119 34v78"/><path d="M135 34v78"/><path d="M151 34v78"/><path d="M168 34v78"/><path d="M184 34v78"/><path d="M201 34v78"/><path d="M217 34v78"/><path d="M234 34v78"/></g><path d="M20 30h250" stroke="#fff" stroke-opacity=".25"/><path d="M20 112h250" stroke="#d9622b" stroke-width="2"/><path d="M282 52v56M294 56v54" stroke="#000" stroke-opacity=".4" stroke-width="2"/></symbol><symbol id="c460" viewBox="0 0 500 150"><ellipse cx="250.0" cy="128" rx="230.0" ry="7" fill="#000" opacity=".5"/><rect x="20" y="30" width="410" height="86" fill="url(#g1)"/><path d="M430 30l50 16v70l-50 0z" fill="url(#g2)"/><g stroke="#000" stroke-opacity=".28" stroke-width="2"><path d="M38 34v78"/><path d="M55 34v78"/><path d="M73 34v78"/><path d="M91 34v78"/><path d="M109 34v78"/><path d="M126 34v78"/><path d="M144 34v78"/><path d="M162 34v78"/><path d="M180 34v78"/><path d="M197 34v78"/><path d="M215 34v78"/><path d="M233 34v78"/><path d="M250 34v78"/><path d="M268 34v78"/><path d="M286 34v78"/><path d="M304 34v78"/><path d="M321 34v78"/><path d="M339 34v78"/><path d="M357 34v78"/><path d="M375 34v78"/><path d="M392 34v78"/></g><path d="M20 30h410" stroke="#fff" stroke-opacity=".25"/><path d="M20 112h410" stroke="#d9622b" stroke-width="2"/><path d="M442 52v56M454 56v54" stroke="#000" stroke-opacity=".4" stroke-width="2"/></symbol></svg>
+<header><div class="w"><a class="logo" href="#top">КОНТЕЙНЕР<b>.</b>ПРОМ</a><nav><a href="#catalog">Каталог</a><a href="#custom">Производство</a><a href="#tech">Индивидуальные решения</a><a href="#work">Как мы работаем</a><a href="#contacts">Контакты</a></nav><a class="btn" href="#contacts" style="padding:11px 20px">Получить расчет <i>→</i></a></div></header>
+<main id="top">
+<div class="hero"><div class="w hp"><span class="tag">Собственное производство</span>
+<h1>Контейнеры<br><em>под ваши задачи</em></h1>
+<p class="sub">Производим контейнеры 20 и 40 футов, спецконтейнеры и конструкции под технологическое оборудование. Изготавливаем стандартные и индивидуальные решения по вашим размерам и техническому заданию.</p>
+<div class="btns"><a class="btn" href="#contacts">Получить расчет <i>→</i></a><a class="btn o" href="#catalog">Смотреть каталог <i>→</i></a></div>
+<div class="hv"><svg viewBox="0 0 500 150"><use href="#c460"/></svg></div>
+<p class="cap">От стандартного контейнера до сложного технического решения</p>
+<div class="adv"><div><span>01</span>Изготовление по размерам</div><div><span>02</span>Короткие сроки</div><div><span>03</span>Собственное производство</div><div><span>04</span>Индивидуальный подход</div></div></div></div>
+
+<section class="light"><div class="w"><span class="tag">Под конкретную задачу</span>
+<h2>Не подстраивайте оборудование под контейнер — <em>спроектируем контейнер под оборудование</em></h2>
+<p class="lead">Мы изготавливаем контейнерные решения с учетом назначения, габаритов оборудования, требований к вентиляции, электрике, дверным проемам, утеплению и другим техническим параметрам.<br><br>Если стандартного контейнера недостаточно, адаптируем конструкцию или изготовим решение с нуля по вашим размерам.</p>
+<div class="cats" id="cats"></div></div></section>
+
+<section id="catalog"><div class="w"><span class="tag">Каталог</span><h2>Готовые решения</h2>
+<p class="lead">Выберите подходящий тип контейнера или отправьте нам параметры — рассчитаем индивидуальное решение.</p>
+<div class="grid" id="grid"></div></div></section>
+
+<section id="custom" style="background:var(--s1);border-block:1px solid var(--ln)"><div class="w"><span class="tag">Индивидуальное производство</span>
+<div class="two"><div><h2>Нужен контейнер нестандартного размера? <em>Изготовим</em></h2>
+<p class="lead">Не ограничиваемся типовыми решениями. Изготавливаем контейнеры под конкретное оборудование, технологический процесс и условия эксплуатации.<br><br>Перед началом производства учитываем размеры оборудования, необходимое внутреннее пространство, расположение дверей, вентиляции, кабельных вводов и других элементов.</p>
+<div style="margin-top:40px"><a class="btn" href="#contacts">Обсудить проект <i>→</i></a></div></div>
+<svg class="dr" viewBox="0 0 400 230"><g fill="none" stroke="currentColor" stroke-opacity=".5" stroke-width="1"><rect x="40" y="40" width="320" height="120"/><rect x="60" y="62" width="150" height="76" stroke="#d9622b" stroke-opacity="1" stroke-dasharray="4 4"/><path d="M40 188h320M40 181v14M360 181v14M16 40v120M9 40h14M9 160h14M300 40v120" stroke-dasharray="none"/></g><g fill="currentColor" fill-opacity=".7" font-size="11" letter-spacing="1.5"><text x="150" y="212">L — ПО ТЗ</text><text x="86" y="104" fill="#d9622b">ОБОРУДОВАНИЕ</text><text x="306" y="104">ДВЕРЬ</text></g></svg></div>
+<div class="steps s5"><div class="step"><b>01</b><h3>Получаем задачу</h3></div><div class="step"><b>02</b><h3>Уточняем параметры</h3></div><div class="step"><b>03</b><h3>Согласовываем конструкцию</h3></div><div class="step"><b>04</b><h3>Производим</h3></div><div class="step"><b>05</b><h3>Передаем готовое решение</h3></div></div></div></section>
+
+<section class="light" id="tech"><div class="w"><div class="two"><div><span class="tag">Технологическое оборудование</span>
+<h2>Контейнер становится частью <em>технологической системы</em></h2>
+<p class="lead">Проектируем пространство с учетом оборудования и условий его эксплуатации. Контейнер может быть адаптирован под размещение технологических установок, инженерных систем и другого оборудования.</p></div>
+<div><div class="chips"><span>размеры оборудования</span><span>расположение оборудования</span><span>дверные проемы</span><span>вентиляция</span><span>кабельные вводы</span><span>электрика</span><span>утепление</span><span>внутренние перегородки</span><span>технологические отверстия</span><span>требования к обслуживанию оборудования</span></div>
+<p class="note">Точные параметры определяются индивидуальным техническим заданием.</p></div></div></div></section>
+
+<section><div class="w"><span class="tag">Почему мы</span><h2>Производство, <em>ориентированное на задачу</em></h2>
+<div class="why"><div><b>01</b><h3>Индивидуальные размеры</h3><p>Изготавливаем решения под конкретные габариты и требования.</p></div><div><b>02</b><h3>Короткие сроки</h3><p>Оптимизируем производственный процесс без потери качества.</p></div><div><b>03</b><h3>Качество конструкции</h3><p>Используем прочные материалы и уделяем внимание деталям изготовления.</p></div><div><b>04</b><h3>Прямой диалог</h3><p>Работаем непосредственно с заказчиком и учитываем особенности проекта.</p></div></div></div></section>
+
+<section class="light" id="work"><div class="w"><span class="tag">Процесс</span><h2>Как мы работаем</h2>
+<div class="steps s5"><div class="step"><b>01</b><h3>Заявка</h3><p>Вы отправляете размеры, чертеж или просто описываете задачу.</p></div><div class="step"><b>02</b><h3>Обсуждение</h3><p>Уточняем назначение контейнера и технические требования.</p></div><div class="step"><b>03</b><h3>Расчет</h3><p>Формируем предложение по конструкции и стоимости.</p></div><div class="step"><b>04</b><h3>Производство</h3><p>Изготавливаем контейнер в согласованные сроки.</p></div><div class="step"><b>05</b><h3>Готовое решение</h3><p>Передаем готовый контейнер заказчику.</p></div></div></div></section>
+
+<section><div class="w" style="max-width:960px"><span class="tag">FAQ</span><h2 style="margin-bottom:56px">Частые вопросы</h2>
+<details><summary>Можно ли изготовить контейнер по моим размерам?</summary><p>Да. Мы можем адаптировать конструкцию или разработать решение под индивидуальные размеры и технические требования.</p></details>
+<details><summary>Можно ли изготовить контейнер под конкретное оборудование?</summary><p>Да. При проектировании учитываются габариты оборудования, расположение элементов и требования к его эксплуатации.</p></details>
+<details><summary>Изготавливаете ли вы спецконтейнеры?</summary><p>Да, изготавливаем специальные контейнерные решения под конкретные задачи.</p></details>
+<details><summary>Можно ли заказать контейнер в нестандартной комплектации?</summary><p>Да. Комплектация и конструктивные особенности согласовываются индивидуально.</p></details>
+<details><summary>Какие сроки производства?</summary><p>Срок зависит от типа контейнера, сложности конструкции и объема работ. Точный срок сообщается после согласования технического задания.</p></details>
+<details><summary>Как получить стоимость?</summary><p>Оставьте заявку или отправьте размеры и технические требования. Мы подготовим расчет.</p></details></div></section>
+
+<section class="cta"><div class="w"><h2>Опишите задачу — <em>мы предложим решение</em></h2><p>Стандартный контейнер, спецконтейнер или конструкция по индивидуальным размерам — обсудим задачу и рассчитаем подходящий вариант.</p><a class="btn" href="#contacts">Получить расчет <i>→</i></a></div></section>
+</main>
+<footer id="contacts"><div class="w fg"><div><div class="logo" style="color:var(--tx);margin-bottom:18px">КОНТЕЙНЕР<b>.</b>ПРОМ</div><p style="margin:0">[Название компании]<br>Тел.: <a href="tel:+70000000000" style="display:inline">[телефон]</a><br>E-mail: <a href="mailto:info@example.ru" style="display:inline">[e-mail]</a><br>Адрес производства: [адрес]<br>Реквизиты: [ИНН / ОГРН]</p><a href="#" style="margin-top:12px">Политика конфиденциальности</a></div>
+<div><h4>Навигация</h4><a href="#catalog">Каталог</a><a href="#custom">Производство</a><a href="#tech">Индивидуальные решения</a><a href="#work">Как мы работаем</a><a href="#contacts">Контакты</a></div></div></footer><div class="stk"><a class="btn" href="#contacts">Получить расчет <i>→</i></a></div>
+<script>
+const C=[["Технологические контейнеры","c460"],["Спецконтейнеры","c300"],["Складские контейнеры","c460"],["Бытовые помещения","c300"]];
+document.getElementById('cats').innerHTML=C.map(c=>`<div class="cat"><div class="im"><svg viewBox="0 0 500 150"><use href="#${c[1]}"/></svg></div><h3>${c[0]}</h3></div>`).join('');
+const P=[["c300","Контейнер 20-футовый инструментальный Larosa","Инструментальный контейнер для хранения оборудования, инструмента и материалов. Изготовлен по спецификации №1-23/202/1 от 28.12.2024 г.",[],"Спецификация №1-23/202/1 от 28.12.2024 г."],
+["c300","Сухогрузный контейнер 20 футов под склад","Практичное решение для организации складского пространства, хранения оборудования, материалов и инструмента.",["Габариты: 2438 × 2438 × 6058 мм"]],
+["c460","Контейнер 40-футовый Универсал","Универсальный контейнер увеличенного объема для хранения, транспортировки и размещения оборудования. Может адаптироваться под конкретные задачи заказчика.",[]],
+["c460","Морской контейнер 40 футов","Прочный контейнер увеличенного размера для хранения и размещения оборудования и материалов. Торцевые раздвижные двери открываются на всю ширину проема, обеспечивая удобную погрузку крупногабаритных объектов.",["Длина — 12 м","Ширина — 2,4 м","Высота — 2,6 м","Каркас — прочный стальной","Обшивка — гофрированные металлические листы","Двери — стальные раздвижные","Пол — фанера 30 мм"]],
+["c300","Морской контейнер 20 футов для антидроновой защиты объектов","Контейнерное решение для размещения оборудования и организации защищенного пространства на объектах. Конструкция может адаптироваться под требования конкретной задачи.",["Размеры: 6058 × 2438 × 2591 мм","Тип: Dry Cube"]],
+["c460","Контейнер 40 футов","Вместительный контейнер для хранения, размещения оборудования, материалов и организации дополнительного пространства.",["Габариты: 12,19 × 2,43 × 2,59 м","Объем: 67,7 м³","Внутренние размеры: 12,02 × 2,35 × 2,39 м"]]];
+document.getElementById('grid').innerHTML=P.map(p=>`<article class="card" tabindex="0"><div class="ph"><svg viewBox="0 0 500 150"><use href="#${p[0]}"/></svg></div><div class="cb"><h3>${p[1]}</h3><p>${p[2]}</p>${p[4]?`<div class="ref">${p[4]}</div>`:''}${p[3].length?`<div class="spw"><ul class="sp">${p[3].map(s=>`<li>${s}</li>`).join('')}</ul></div>`:''}<div class="cbt"><a class="btn o" href="#contacts">Подробнее <i>→</i></a><a class="btn" href="#contacts">Запросить стоимость <i>→</i></a></div></div></article>`).join('');
+</script></body></html>
